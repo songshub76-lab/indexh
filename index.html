@@ -1,0 +1,829 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Mehak 👸🏻</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+
+<style>
+* {
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+
+:root {
+ --gold:#f8d78b;
+ --pink:#ff8eae;
+ --rose:#ffb8cc;
+ --dark:#100713;
+ --cream:#fff2e6;
+}
+
+body {
+ background:#100713;
+ color:white;
+ font-family:'Poppins',sans-serif;
+ overflow-x:hidden;
+}
+
+html {scroll-behavior:smooth;}
+
+#intro {
+ position:fixed;
+ inset:0;
+ z-index:9999;
+ background:
+ radial-gradient(circle at center,#54213e 0%,#1b0a1b 55%,#09050d 100%);
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ text-align:center;
+ padding:20px;
+ transition:1.2s ease;
+}
+
+.gate {
+ max-width:650px;
+ width:100%;
+ padding:40px 20px;
+ border:1px solid #f8d78b88;
+ border-radius:25px;
+ box-shadow:0 0 40px #ff8eae33,inset 0 0 30px #f8d78b15;
+ background:#ffffff08;
+ backdrop-filter:blur(10px);
+}
+
+.crown {
+ font-size:65px;
+ animation:float 3s infinite;
+}
+
+.gate h1 {
+ font-family:'Great Vibes',cursive;
+ font-size:clamp(45px,10vw,75px);
+ color:var(--gold);
+ margin:20px 0;
+}
+
+.gate p {
+ color:#ffe2ed;
+ letter-spacing:3px;
+ font-size:12px;
+ line-height:2;
+}
+
+.enter {
+ margin-top:35px;
+ padding:15px 35px;
+ border:none;
+ border-radius:50px;
+ background:linear-gradient(90deg,#e9b86d,#ff9cb9);
+ color:#351324;
+ font-weight:bold;
+ font-size:15px;
+ cursor:pointer;
+ box-shadow:0 0 25px #ff9cb988;
+ transition:.4s;
+}
+
+.enter:hover {transform:scale(1.08);}
+
+#main {
+ display:none;
+ animation:fadeIn 2s ease;
+}
+
+section {
+ min-height:100vh;
+ padding:100px 20px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ text-align:center;
+ position:relative;
+ overflow:hidden;
+ background:
+ radial-gradient(ellipse at top,#58233f 0%,transparent 60%),
+ linear-gradient(145deg,#130914,#260e25,#100713);
+ border-bottom:1px solid #f8d78b22;
+}
+
+section:nth-child(even) {
+ background:
+ radial-gradient(ellipse at bottom,#532039 0%,transparent 65%),
+ linear-gradient(135deg,#0e0914,#261021);
+}
+
+.content {
+ max-width:850px;
+ width:100%;
+ position:relative;
+ z-index:2;
+}
+
+.eyebrow {
+ color:var(--gold);
+ letter-spacing:4px;
+ font-size:11px;
+ text-transform:uppercase;
+ margin-bottom:25px;
+}
+
+h2 {
+ font-family:'Playfair Display',serif;
+ font-size:clamp(30px,6vw,55px);
+ color:var(--gold);
+ line-height:1.3;
+ margin-bottom:25px;
+}
+
+.script {
+ font-family:'Great Vibes',cursive;
+ font-size:clamp(40px,9vw,75px);
+ color:var(--rose);
+ margin:20px 0;
+}
+
+p {
+ color:#f8e8ee;
+ font-size:15px;
+ line-height:2.2;
+ margin:18px 0;
+}
+
+.highlight {color:#ffd88e;}
+
+.poetry {
+ margin:35px auto;
+ padding:25px 15px;
+ border-top:1px solid #f8d78b66;
+ border-bottom:1px solid #f8d78b66;
+ color:#ffdca4;
+ font-family:'Playfair Display',serif;
+ font-size:19px;
+ line-height:2;
+}
+
+.urdu {
+ font-family:'Noto Nastaliq Urdu',serif;
+ font-size:22px;
+ line-height:2.5;
+ color:#ffcad9;
+ direction:rtl;
+ margin:30px auto;
+}
+
+.btn {
+ display:inline-block;
+ padding:13px 27px;
+ border-radius:40px;
+ margin:15px 5px;
+ border:1px solid var(--gold);
+ background:transparent;
+ color:var(--gold);
+ cursor:pointer;
+ font-weight:600;
+ transition:.3s;
+}
+
+.btn:hover {
+ background:var(--gold);
+ color:#1b0b19;
+ box-shadow:0 0 20px #f8d78b88;
+}
+
+.badge {
+ display:inline-block;
+ padding:9px 17px;
+ border-radius:30px;
+ background:#ffffff10;
+ border:1px solid #ffbad044;
+ color:#ffd7e4;
+ margin:6px;
+ font-size:12px;
+}
+
+.photo-grid {
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:18px;
+ margin-top:35px;
+}
+
+.photo {
+ border:1px solid #f8d78b77;
+ border-radius:18px;
+ padding:10px;
+ background:#ffffff0c;
+ box-shadow:0 0 25px #ff8eae18;
+}
+
+.photo img {
+ width:100%;
+ aspect-ratio:3/4;
+ object-fit:cover;
+ border-radius:12px;
+ display:block;
+}
+
+.photo span {
+ display:block;
+ color:var(--gold);
+ padding:12px 2px 4px;
+ font-size:13px;
+}
+
+.wish {
+ padding:20px;
+ margin:15px 0;
+ border-radius:18px;
+ background:#ffffff0b;
+ border:1px solid #ffb8cc33;
+ text-align:left;
+ line-height:2;
+}
+
+.heart {
+ position:fixed;
+ bottom:-30px;
+ z-index:1;
+ pointer-events:none;
+ animation:rise linear forwards;
+}
+
+@keyframes rise {
+ to {transform:translateY(-110vh) rotate(360deg);opacity:0;}
+}
+
+@keyframes float {
+ 50% {transform:translateY(-12px);}
+}
+
+@keyframes fadeIn {
+ from {opacity:0;}
+ to {opacity:1;}
+}
+
+@media(max-width:500px) {
+ section {padding:80px 17px;}
+ .photo-grid {gap:10px;}
+ p {font-size:13px;}
+ .poetry {font-size:16px;}
+}
+
+#musicBtn {
+ position:fixed;
+ bottom:20px;
+ right:18px;
+ z-index:500;
+ background:#f8d78b;
+ color:#241020;
+ border:none;
+ border-radius:50px;
+ padding:12px 17px;
+ font-weight:bold;
+ cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- GRAND WELCOME GATE -->
+
+<div id="intro">
+ <div class="gate">
+  <div class="crown">👸🏻</div>
+
+  <p>A PRIVATE CELEBRATION CREATED WITH LOVE</p>
+
+  <h1>Welcome, Mehak</h1>
+
+  <p>
+   A BEAUTIFUL SOUL DESERVES<br>
+   A CELEBRATION BEYOND ORDINARY
+  </p>
+
+  <div class="script">Your Special Day</div>
+
+  <p>20 NOVEMBER • THE DAY OF MEHAK</p>
+
+  <button class="enter" onclick="enterSite()">
+   OPEN YOUR CELEBRATION ✨
+  </button>
+
+  <p style="font-size:11px;margin-top:25px">
+   A LITTLE WORLD MADE JUST FOR YOU 💗
+  </p>
+ </div>
+</div>
+
+<!-- MAIN WEBSITE -->
+
+<div id="main">
+
+<!-- PAGE 1 -->
+
+<section>
+ <div class="content">
+  <div class="crown">👸🏻</div>
+  <div class="eyebrow">A DAY WRITTEN IN GOLD</div>
+
+  <h2>THE MOST EXTRAORDINARY GIRL DESERVES AN EXTRAORDINARY DAY.</h2>
+
+  <div class="script">Happy Birthday</div>
+
+  <h2>MEHAK 👸🏻</h2>
+
+  <p class="highlight">
+   20 NOVEMBER — A DAY WORTH CELEBRATING
+  </p>
+
+  <div class="poetry">
+   One name. Countless beautiful reasons to celebrate.<br>
+   One birthday. A million wishes for happiness.
+  </div>
+
+  <p>HAPPY BIRTHDAY MERI MEHAK! 🎂💗</p>
+  <button class="btn" onclick="nextPage(1)">LET THE MAGIC BEGIN ↓</button>
+ </div>
+</section>
+
+<!-- PAGE 2 -->
+
+<section>
+ <div class="content">
+  <div class="eyebrow">A SPECIAL MESSAGE</div>
+  <div class="script">Happy Birthday, My Love</div>
+
+  <h2>MERI MEHAK, MERI DUNIYA 💞</h2>
+
+  <p>
+   Today is not just another date on the calendar.
+   It is a celebration of a beautiful soul, a precious personality
+   and a person whose name holds countless beautiful emotions.
+  </p>
+
+  <p>
+   May your birthday bring you endless happiness,
+   unforgettable memories, extraordinary opportunities
+   and every beautiful thing your heart wishes for.
+  </p>
+
+  <div class="poetry">
+   May every sunrise bring you a reason to smile,<br>
+   May happiness accompany you mile after mile.
+  </div>
+
+  <h2>HAPPY BIRTHDAY, MY MEHAK! 🎂</h2>
+ </div>
+</section>
+
+<!-- PAGE 3 -->
+
+<section>
+ <div class="content">
+  <div class="eyebrow">CHAPTER ONE • HER IDENTITY</div>
+  <div class="script">The Extraordinary Girl</div>
+
+  <h2>THERE IS ONLY ONE MEHAK.</h2>
+
+  <p>
+   Some personalities cannot be defined through ordinary
+   descriptions. They possess an individuality that makes
+   them memorable, a presence that deserves appreciation
+   and a character that deserves respect.
+  </p>
+
+  <p>
+   Mehak, your identity is not dependent on comparisons.
+   Your individuality, your dreams, your thoughts and your
+   personal qualities make you uniquely yourself.
+  </p>
+
+  <div class="poetry">
+   ہزار چہروں میں اک الگ پہچان رکھتے ہیں،<br>
+   کچھ لوگ اپنی ذات میں اک جہان رکھتے ہیں۔
+  </div>
+
+  <p>YOU ARE ONE OF A KIND. 👸🏻</p>
+ </div>
+</section>
+
+<!-- PAGE 4 -->
+
+<section>
+ <div class="content">
+  <div class="eyebrow">CHAPTER TWO • HER CHARACTER</div>
+  <h2>THE BEAUTY OF HER CHARACTER</h2>
+
+  <p>
+   A beautiful character is an extraordinary combination
+   of sincerity, integrity, compassion, humility,
+   emotional intelligence and respect.
+  </p>
+
+  <p>
+   The real elegance of a person is reflected in the way
+   they treat others, the respect they give to relationships,
+   the honesty behind their words and the kindness within
+   their heart.
+  </p>
+
+  <div class="badge">Grace</div>
+  <div class="badge">Sincerity</div>
+  <div class="badge">Integrity</div>
+  <div class="badge">Kindness</div>
+  <div class="badge">Dignity</div>
+  <div class="badge">Elegance</div>
+
+  <div class="poetry">
+   حسن چہرے کا نہیں، کردار کا چرچا ہونا چاہیے،<br>
+   انسان کو اپنے اخلاق سے پہچانا جانا چاہیے۔
+  </div>
+
+  <h2>HAPPY BIRTHDAY, BEAUTIFUL SOUL! 💗</h2>
+ </div>
+</section>
+
+<!-- PAGE 5 -->
+
+<section>
+ <div class="content">
+  <div class="eyebrow">CHAPTER THREE • HER ELEGANCE</div>
+  <h2>AN ADMIRABLE PERSONALITY</h2>
+
+  <p>
+   There is a certain beauty in simplicity, a certain
+   dignity in modesty and a certain magnificence in
+   a person who carries herself with confidence and grace.
+  </p>
+
+  <p>
+   Elegance is not about being noticed by everyone.
+   It is about possessing a personality that leaves
+   a beautiful impression without demanding attention.
+  </p>
+
+  <div class="poetry">
+   سادگی میں بھی عجب حسنِ نمایاں ہے تیرا،<br>
+   تیرا انداز ہی تیری الگ پہچان ہے۔
+  </div>
+
+  <div class="script">Simply Unforgettable</div>
+  <h2>THAT'S MY MEHAK! 👸🏻</h2>
+ </div>
+</section>
+
+<!-- PAGE 6 -->
+
+<section>
+ <div class="content">
+  <div class="eyebrow">CHAPTER FOUR • HER BEAUTY</div>
+  <h2>BEAUTY BEYOND DESCRIPTION</h2>
+
+  <p>
+   Your smile, your expressions, your eyes and your
+   beautiful presence have their own charm.
+   Yet what makes beauty truly remarkable is when
+   it is accompanied by a beautiful heart and
+   a graceful personality.
+  </p>
+
+  <div class="poetry">
+   آنکھوں میں خواب، لبوں پہ مسکان رہنے دو،<br>
+   میری مہک کو ہمیشہ یوں ہی شادمان رہنے دو۔
+  </div>
+
+  <div class="script">Forever Beautiful</div>
+  <h2>HAPPY BIRTHDAY, GORGEOUS GIRL! 🌹</h2>
+ </div>
+</section>
+
+<!-- PAGE 7 -->
+
+<section>
+ <div class="content">
+  <div class="eyebrow">CHAPTER FIVE • HER HEART</div>
+  <h2>A HEART WORTH APPRECIATING</h2>
+
+  <p>
+   A kind heart is one of life's greatest treasures.
+   The ability to understand, appreciate, forgive,
+   care and respect makes a person genuinely special.
+  </p>
+
+  <p>
+   May your heart always remain filled with peace,
+   your intentions remain sincere and your life
+   always be surrounded by people who value you.
+  </p>
+
+  <div class="poetry">
+   دل کی خوبصورتی کبھی زوال نہیں پاتی،<br>
+   خلوص کی روشنی کبھی ماند نہیں پڑتی۔
+  </div>
+
+  <h2>KEEP SHINING, MEHAK! 🫀</h2>
+ </div>
+</section>
+
+<!-- PAGE 8 : FOUR PHOTOS -->
+
+<section>
+ <div class="content">
+  <div class="eyebrow">A GALLERY OF BEAUTIFUL MEMORIES</div>
+  <div class="script">Four Moments, One Beautiful Name</div>
+  <h2>MY BEAUTIFUL MEHAK 👸🏻</h2>
+
+  <p>
+   Four photographs, four beautiful frames,
+   and countless reasons to appreciate you.
+  </p>
+
+  <div class="photo-grid">
+
+   <div class="photo">
+    <img src="mehak1.jpg" alt="Mehak photo 1">
+    <span>01 • THE BEAUTIFUL SOUL 🌷</span>
+   </div>
+
+   <div class="photo">
+    <img src="mehak2.jpg" alt="Mehak photo 2">
+    <span>02 • THE LOVELY SMILE 💗</span>
+   </div>
+
+   <div class="photo">
+    <img src="mehak3.jpg" alt="Mehak photo 3">
+    <span>03 • THE ELEGANT GIRL 👸🏻</span>
+   </div>
+
+   <div class="photo">
+    <img src="mehak4.jpg" alt="Mehak photo 4">
+    <span>04 • MY FAVOURITE PERSON 🫀</span>
+   </div>
+
+  </div>
+
+  <div class="poetry">
+   یہ تصویریں تو فقط چند لمحوں کی نشانی ہیں،<br>
+   اصل خوبصورتی تو ان سے وابستہ کہانی ہے۔
+  </div>
+
+  <h2>HAPPY BIRTHDAY, MY FAVOURITE GIRL! 💞</h2>
+ </div>
+</section>
+
+<!-- PAGE 9 -->
+
+<section>
+ <div class="content">
+  <div class="eyebrow">A COLLECTION OF WISHES</div>
+  <h2>MY BIRTHDAY WISHES FOR YOU</h2>
+
+  <div class="wish">
+   🎂 HAPPY BIRTHDAY MERI MEHAK! May your life be
+   filled with endless happiness and beautiful surprises.
+  </div>
+
+  <div class="wish">
+   👸🏻 HAPPY BIRTHDAY MY PRINCESS! May every dream
+   you cherish find its beautiful destination.
+  </div>
+
+  <div class="wish">
+   💗 HAPPY BIRTHDAY MY GORGEOUS GIRL!
+   May your smile never lose its brightness.
+  </div>
+
+  <div class="wish">
+   🌹 HAPPY BIRTHDAY MY BEAUTIFUL WIFE!
+   May Allah bless you with a lifetime of peace and prosperity.
+  </div>
+
+  <div class="wish">
+   🫀 HAPPY BIRTHDAY MERI JAAN!
+   May every coming year become more beautiful than the last.
+  </div>
+
+  <div class="script">Happy Birthday Again & Again!</div>
+ </div>
+</section>
+
+<!-- PAGE 10 -->
+
+<section>
+ <div class="content">
+  <div class="eyebrow">WORDS FROM THE HEART</div>
+  <h2>FOR MY DEAREST MEHAK</h2>
+
+  <div class="urdu">
+   آپ میری زندگی کا وہ خوبصورت حوالہ ہیں
+   جسے میں ہمیشہ محبت، عزت اور خلوص کے ساتھ
+   یاد رکھنا چاہتا ہوں۔
+  </div>
+
+  <p>
+   Meri Mehak, I want you to know that your happiness
+   matters, your individuality matters and your dreams
+   deserve every opportunity to flourish.
+  </p>
+
+  <p>
+   I hope you always find reasons to celebrate yourself,
+   appreciate your achievements and believe in your potential.
+  </p>
+
+  <div class="poetry">
+   تمہاری خوشیوں سے روشن رہیں زندگی کے تمام راستے،<br>
+   تمہارے حصے میں آئیں محبتیں، دعائیں اور کامیابیاں۔
+  </div>
+
+  <h2>HAPPY BIRTHDAY MERI DUNIYA! 💘</h2>
+ </div>
+</section>
+
+<!-- PAGE 11 -->
+
+<section>
+ <div class="content">
+  <div class="eyebrow">A PRAYER FOR YOUR LIFE</div>
+  <div class="script">My Beautiful Dua</div>
+
+  <h2>MAY ALLAH BLESS YOU ALWAYS. 🤲🏻</h2>
+
+  <p>
+   May Allah grant you good health, a peaceful heart,
+   immense happiness, beneficial knowledge,
+   success in every righteous endeavour and protection
+   from every difficulty.
+  </p>
+
+  <p>
+   May your parents always be proud of you.
+   May your days be filled with barakah,
+   your efforts rewarded with success and
+   your future brighter than your dreams.
+  </p>
+
+  <div class="urdu">
+   اللہ تعالیٰ آپ کی زندگی کو رحمتوں،
+   برکتوں، خوشیوں اور کامیابیوں سے بھر دے۔
+   آمین یا رب العالمین۔
+  </div>
+
+  <div class="poetry">
+   ہر دعا میں تمہارے لیے خیر مانگتے ہیں،<br>
+   تمہاری زندگی کے لیے خوشیوں کے موسم مانگتے ہیں۔
+  </div>
+
+  <h2>HAPPY BIRTHDAY, MEHAK! 🌙</h2>
+ </div>
+</section>
+
+<!-- PAGE 12 : FINAL -->
+
+<section>
+ <div class="content">
+  <div class="crown">👸🏻</div>
+
+  <div class="eyebrow">THE FINAL CHAPTER</div>
+
+  <div class="script">Once Again...</div>
+
+  <h2>HAPPY BIRTHDAY</h2>
+
+  <h2 style="font-size:clamp(38px,9vw,75px)">
+   MERI MEHAK! 💗
+  </h2>
+
+  <p>
+   May this birthday become a beautiful beginning
+   of another wonderful chapter in your life.
+  </p>
+
+  <div class="poetry">
+   ہزار خوشیاں آپ کے قدم چومیں،<br>
+   ہر نیا دن آپ کے لیے نئی مسرتیں لے کر آئے۔
+  </div>
+
+  <div class="script">With Love & Endless Prayers</div>
+
+  <h2>HAPPY HAPPY HAPPY BIRTHDAY! 🎂</h2>
+
+  <p>
+   MERI JINRI • MERI MEHAK • MERI JAAN<br>
+   MERI DUNIYA • MY BEAUTIFUL WIFE 👸🏻
+  </p>
+
+  <div class="crown">💗🫂🫀🌹</div>
+
+  <p style="color:#f8d78b">
+   MADE WITH LOVE • 20 NOVEMBER
+  </p>
+
+  <button class="btn" onclick="location.reload()">
+   REPLAY THE CELEBRATION ↻
+  </button>
+ </div>
+</section>
+
+</div>
+
+<button id="musicBtn" onclick="toggleMusic()" style="display:none">
+ ♫ Music
+</button>
+
+<audio id="music" loop>
+ <source src="birthday.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+function enterSite() {
+ document.getElementById("intro").style.opacity="0";
+
+ setTimeout(()=>{
+  document.getElementById("intro").style.display="none";
+  document.getElementById("main").style.display="block";
+  document.getElementById("musicBtn").style.display="block";
+  window.scrollTo(0,0);
+  createHearts();
+  confetti();
+ },1000);
+}
+
+function createHearts() {
+ const symbols=["💗","💕","💖","✨","🌸","🫀","💘"];
+
+ setInterval(()=>{
+  const heart=document.createElement("div");
+  heart.className="heart";
+  heart.innerHTML=symbols[Math.floor(Math.random()*symbols.length)];
+
+  heart.style.left=Math.random()*100+"%";
+  heart.style.fontSize=(15+Math.random()*20)+"px";
+  heart.style.animationDuration=(5+Math.random()*5)+"s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(()=>heart.remove(),10000);
+ },500);
+}
+
+function confetti() {
+ for(let i=0;i<100;i++){
+  let piece=document.createElement("div");
+  piece.innerHTML=["✨","🎊","💗","🌟"][Math.floor(Math.random()*4)];
+
+  piece.style.position="fixed";
+  piece.style.left=Math.random()*100+"vw";
+  piece.style.top="-30px";
+  piece.style.zIndex="10000";
+  piece.style.pointerEvents="none";
+  piece.style.fontSize=(12+Math.random()*15)+"px";
+  piece.style.transition="transform 4s linear, opacity 4s";
+
+  document.body.appendChild(piece);
+
+  setTimeout(()=>{
+   piece.style.transform=`translateY(110vh) rotate(700deg)`;
+   piece.style.opacity="0";
+  },50);
+
+  setTimeout(()=>piece.remove(),4200);
+ }
+}
+
+function nextPage(number) {
+ const sections=document.querySelectorAll("#main section");
+ if(sections[number]) {
+  sections[number].scrollIntoView({behavior:"smooth"});
+ }
+}
+
+let playing=false;
+
+function toggleMusic(){
+ const music=document.getElementById("music");
+
+ if(!playing){
+  music.play().then(()=>{
+   playing=true;
+   document.getElementById("musicBtn").innerText="♫ Pause";
+  }).catch(()=>alert("Please check your birthday.mp3 file."));
+ } else {
+  music.pause();
+  playing=false;
+  document.getElementById("musicBtn").innerText="♫ Music";
+ }
+}
+
+</script>
+
+</body>
+</html>
